@@ -8,6 +8,7 @@ public class Branch {
     private String ifscCode;
     private String branchName;
     private BranchAddress address;
+    private Long headBranchId;
 
     public Branch() {
     }
@@ -44,6 +45,14 @@ public class Branch {
         this.address = address;
     }
 
+    public Long getHeadBranchId() {
+        return headBranchId;
+    }
+
+    public void setHeadBranchId(Long headBranchId) {
+        this.headBranchId = headBranchId;
+    }
+
     @Override
     public String toString() {
         return "Branch{" +
@@ -51,6 +60,7 @@ public class Branch {
                 ", ifscCode='" + ifscCode + '\'' +
                 ", branchName='" + branchName + '\'' +
                 ", address=" + address +
+                ", headBranchId=" + headBranchId +
                 '}';
     }
 }

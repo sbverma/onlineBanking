@@ -3,6 +3,8 @@ package entities;
 import enums.TransactionType;
 import pojo.TransactionStatus;
 
+import java.util.Date;
+
 public class Transaction {
 
     private Long transactionId;
@@ -10,6 +12,7 @@ public class Transaction {
     private TransactionType type;
     private TransactionStatus transactionStatus;
     private Account account;
+    private Date createdAt;
 
     public Transaction() {
     }
@@ -42,8 +45,6 @@ public class Transaction {
         return transactionStatus;
     }
 
-
-
     public Account getAccount() {
         return account;
     }
@@ -52,6 +53,29 @@ public class Transaction {
         this.account = account;
     }
 
+    public void setTransactionStatus(TransactionStatus transactionStatus) {
+        this.transactionStatus = transactionStatus;
+    }
+
+    public Date getCreatedAt() {
+        return createdAt;
+    }
+
+    public void setCreatedAt(Date createdAt) {
+        this.createdAt = createdAt;
+    }
+
+    @Override
+    public String toString() {
+        return "Transaction{" +
+                "transactionId=" + transactionId +
+                ", amount=" + amount +
+                ", type=" + type +
+                ", transactionStatus=" + transactionStatus +
+                ", account=" + account +
+                ", createdAt=" + createdAt +
+                '}';
+    }
 }
 
 
